@@ -89,7 +89,7 @@ Assuming you have all the requirements installed, follow these steps to install 
 
 #### Setting up PostgreSQL
 
--   Create a new PostgreSQL database named animeheaven. **Make sure you use the same name as `DB_DATABASE` in the `.env` file**:
+-   Create a new PostgreSQL database named `animeheaven`. **Make sure you use the same name as `DB_DATABASE` in the `.env` file**:
     ```
     CREATE DATABASE animeheaven;
     ```
