@@ -1,0 +1,128 @@
+.product-container {
+    @extend .container-fluid, .mt-3;
+    padding-left: 11vw;
+    padding-right: 11vw;
+}
+
+.product-row {
+    @extend .row, .justify-content-center, .align-items-center, .p-2, .bg-light;
+    border: 1px solid $secondary;
+}
+
+.product-link-col {
+    @extend .col-xl, .col-lg, .col-md-12, .col-12;
+    justify-content: center;
+}
+
+.product-link {
+    @extend .row;
+    justify-content: center;
+    text-decoration: none;
+    color: inherit;
+}
+
+.col-image {
+    @extend .col-2;
+    width: 150px;
+}
+
+.col-text {
+    @extend .col;
+    align-self: center;
+}
+
+.col-piece-amount {
+    @extend .d-flex, .justify-content-center;
+    width: 175px;
+    padding: 0;
+}
+
+.col-price {
+    @extend .col-2;
+    text-align: center;
+}
+
+.col-delete {
+    @extend .col-1;
+    text-align: center;
+}
+
+.inc-dec-button {
+    @extend .btn, .btn-primary, .btn-sm, .rounded-0;
+    background-color: black;
+    border-color: black;
+    width: 30px;
+    &:hover {
+        background-color: $danger;
+        border-color: $danger;
+    }
+}
+
+.show-piece-amount {
+    width: 40px;
+    height: 50px;
+    text-align: center;
+    -webkit-appearance: none;
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+    -moz-appearance: textfield;
+    appearance: none;
+}
+
+.form-cart-row {
+    @extend .row;
+    padding: 0;
+    margin: 0;
+}
+
+.amount-label {
+    text-align: center;
+    align-self: center;
+    margin-right: 10px;
+}
+
+.inc-dec-button-show {
+    @extend .btn, .btn-primary, .btn-sm, .rounded-0;
+    background-color: black;
+    border-color: black;
+    margin: 0;
+    padding: 0;
+    width: 25px;
+    height: 25px;
+    &:hover {
+        background-color: $danger;
+        border-color: $danger;
+    }
+}
+
+.order-button-container {
+    @extend .d-flex, .justify-content-end;
+    padding-left: 11vw;
+    padding-right: 11vw;
+    margin-top: 3vh;
+}
+
+.order-button {
+    @extend .btn, .btn-primary;
+}
+
+@include media-breakpoint-down(md) {
+    .col-image {
+        width: 100%;
+    }
+
+    .col-text {
+        flex-basis: auto;
+        width: 100%;
+        text-align: center;
+        margin-top: $spacer;
+        margin-bottom: $spacer;
+    }
+
+    .col-price {
+        text-align: center;
+    }
+}
