@@ -7,17 +7,14 @@
 
 ## Table of Contents
 
-- [AnimeHeaven](#animeheaven)
-    - [This is improved version of Original Project](#this-is-improved-version-of-original-project)
-  - [Table of Contents](#table-of-contents)
-  - [Description](#description)
-  - [Requirements](#requirements)
-  - [Installation](#installation)
-    - [Installing the project](#installing-the-project)
-    - [Setting up environment](#setting-up-environment)
-    - [Setting up database](#setting-up-database)
-      - [Setting up PostgreSQL](#setting-up-postgresql)
-  - [Usage](#usage)
+- [Description](#description)
+- [Requirements](#requirements)
+- [Installation](#installation)
+  - [Installing the project](#installing-the-project)
+  - [Setting up environment](#setting-up-environment)
+  - [Setting up database](#setting-up-database)
+    - [Setting up PostgreSQL](#setting-up-postgresql)
+- [Usage](#usage)
 
 ## Description
 
