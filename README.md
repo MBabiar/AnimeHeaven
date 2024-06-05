@@ -6,6 +6,7 @@
 
 ## Table of Contents
   - [Description](#description)
+  - [Requirements](#requirements)
   - [Installation](#installation)
   - [Usage](#usage)
 
