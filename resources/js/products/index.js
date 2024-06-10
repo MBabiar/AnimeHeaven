@@ -1,24 +1,22 @@
 function rangeChange() {
-    let minVal = document.getElementById("price_min").value;
-    let maxVal = document.getElementById("price_max").value;
-
     function rangeChangeEventHandler(e) {
         let minBtn = document.getElementById("range-slider-min");
         let maxBtn = document.getElementById("range-slider-max");
-        let minPrice = document.getElementById("price_min");
-        let maxPrice = document.getElementById("price_max");
+        let minInput = document.getElementById("price_min");
+        let maxInput = document.getElementById("price_max");
         let minBtnVal = parseInt(minBtn.value, 10);
         let maxBtnVal = parseInt(maxBtn.value, 10);
+        let minInputVal = parseInt(minInput.value, 10);
+        let maxInputVal = parseInt(maxInput.value, 10);
 
         if (minBtnVal >= maxBtnVal) {
-            minBtn.value = minVal;
-            maxBtn.value = maxVal;
+            minBtn.value = minInputVal;
+            maxBtn.value = maxInputVal;
+            return;
         }
-        minVal = minBtn.value;
-        maxVal = maxBtn.value;
 
-        minPrice.value = minVal;
-        maxPrice.value = maxVal;
+        minInput.value = minBtnVal;
+        maxInput.value = maxBtnVal;
     }
 
     document.querySelectorAll('input[type="range"]').forEach(function (input) {
@@ -27,26 +25,24 @@ function rangeChange() {
 }
 
 function inputChange() {
-    let minVal = document.getElementById("price_min").value;
-    let maxVal = document.getElementById("price_max").value;
-
     function inputChangeEventHandler(e) {
         let minBtn = document.getElementById("range-slider-min");
         let maxBtn = document.getElementById("range-slider-max");
-        let minPrice = document.getElementById("price_min");
-        let maxPrice = document.getElementById("price_max");
-        let minPriceVal = parseInt(minPrice.value, 10);
-        let maxPriceVal = parseInt(maxPrice.value, 10);
+        let minInput = document.getElementById("price_min");
+        let maxInput = document.getElementById("price_max");
+        let minBtnVal = parseInt(minBtn.value, 10);
+        let maxBtnVal = parseInt(maxBtn.value, 10);
+        let minInputVal = parseInt(minInput.value, 10);
+        let maxInputVal = parseInt(maxInput.value, 10);
 
-        if (minPriceVal >= maxPriceVal) {
-            minPrice.value = minVal;
-            maxPrice.value = maxVal;
+        if (minInputVal >= maxInputVal) {
+            minInput.value = minBtnVal;
+            maxInput.value = maxBtnVal;
+            return;
         }
-        minVal = minPrice.value;
-        maxVal = maxPrice.value;
 
-        minBtn.value = minVal;
-        maxBtn.value = maxVal;
+        minBtn.value = minInputVal;
+        maxBtn.value = maxInputVal;
     }
 
     document.querySelectorAll('input[type="number"]').forEach(function (input) {
