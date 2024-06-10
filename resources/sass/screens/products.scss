@@ -12,16 +12,71 @@
     padding-right: 11vw;
 }
 
-.input-button-price {
-    width: 75px;
-}
-
-.filter-col-input-buttons {
+// Filter Price
+.filter-price {
     width: 300px;
-    padding-right: 0;
+    padding: 0;
+    display: inline-block;
 }
 
-.filter-col-other {
+.filter-price-input {
+    @extend .rounded, .col-3;
+
+    &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+}
+
+.dash-separator {
+    @extend .col-6;
+    display: flex;
+    justify-content: center;
+}
+
+.range-slider {
+    width: 300px;
+    height: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    input {
+        position: absolute;
+    }
+}
+
+.range-slider-part {
+    width: 300px;
+    -webkit-appearance: none;
+    background: none;
+    cursor: pointer;
+
+    &::-webkit-slider-runnable-track {
+        -webkit-appearance: none;
+        width: 200px;
+        height: 1px;
+        background: #003d7c;
+    }
+
+    &::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        position: relative;
+        height: 15px;
+        width: 15px;
+        margin-top: -7px;
+        background: #fff;
+        border: 1px solid #003d7c;
+        border-radius: 25px;
+        z-index: 1;
+    }
+
+    &:nth-child(2)::-webkit-slider-runnable-track {
+        background: none;
+    }
+}
+
+.filter-selectable-list {
     width: 175px;
     padding: 0;
     margin-left: $spacer * 5;
@@ -72,7 +127,7 @@
 }
 
 @include media-breakpoint-down(xl) {
-    .filter-col-other {
+    .filter-selectable-list {
         margin-left: $spacer * 1.5;
     }
 
@@ -97,11 +152,11 @@
         padding-right: 1vw;
     }
 
-    .filter-col-input-buttons {
+    .filter-price {
         width: 280px;
     }
 
-    .filter-col-other {
+    .filter-selectable-list {
         margin-left: $spacer * 0.5;
     }
 
@@ -111,7 +166,7 @@
 }
 
 @include media-breakpoint-down(md) {
-    .filter-col-input-buttons {
+    .filter-price {
         width: 100%;
         margin-left: $spacer * 0.5;
         margin-bottom: $spacer * 0.5;
@@ -122,7 +177,7 @@
         width: 300px;
     }
 
-    .filter-col-other {
+    .filter-selectable-list {
         width: 100%;
         margin-left: $spacer * 1.2;
         margin-bottom: $spacer * 0.5;

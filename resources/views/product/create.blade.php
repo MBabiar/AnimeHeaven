@@ -1,3 +1,6 @@
+@push('scripts')
+    @vite(['resources/js/product/admin.js'])
+@endpush
 <x-app-layout>
     <!-- Main Content -->
     <form action="{{ route('product.store') }}" method="POST" enctype="multipart/form-data" class="needs-validation"
@@ -151,7 +154,4 @@
             </div>
         </div>
     </form>
-
-    {{-- Scripts --}}
-    @vite(['resources/js/product/admin.js']);
 </x-app-layout>

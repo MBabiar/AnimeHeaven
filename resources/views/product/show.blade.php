@@ -1,3 +1,6 @@
+@push('scripts')
+    @vite(['resources/js/product/show.js'])
+@endpush
 <x-app-layout>
     {{-- Product Detail --}}
     <div class="container mt-4">
@@ -111,5 +114,4 @@
     <script type="text/javascript">
         window.productId = @json($product->id);
     </script>
-    @vite(['resources/js/product/show.js']);
 </x-app-layout>

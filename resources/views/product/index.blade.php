@@ -1,3 +1,6 @@
+@push('scripts')
+    @vite(['resources/js/products/index.js'])
+@endpush
 <x-app-layout>
     {{-- Filter --}}
     <div class="container-fluid navbar navbar-expand-md justify-content-center mt-1 products-nav">
@@ -14,19 +17,25 @@
                 <input type="hidden" name="sort" value="{{ request('sort') }}">
             @endif
             {{-- Price --}}
-            <div class="filter-col-input-buttons">
-                <div class="filter-row-input-buttons">
-                    <label for="price">Cena:</label>
-                    <label for="price_min">Od</label>
-                    <input type="number" id="price_min" name="price_min" min="0"
-                        value="{{ request('price_min') ?? 0 }}" class="input-button-price" />
-                    <label for="price_max">Do</label>
-                    <input type="number" id="price_max" name="price_max" min="0"
-                        value="{{ request('price_max') ?? 100 }}" class="input-button-price" />
+            <div class="filter-price">
+                <div class="row mx-0 my-1">
+                    <input type="number" id="price_min" min="0" name="price_min"
+                        value="{{ request('price_min') ?? 0 }}" class="filter-price-input" />
+                    <span class="dash-separator">-</span>
+                    <input type="number" id="price_max" min="0" name="price_max"
+                        value="{{ request('price_max') ?? 100 }}" class="filter-price-input" />
+                </div>
+                <div class="row mx-0 my-1">
+                    <div class="range-slider">
+                        <input class="range-slider-part" id="range-slider-min" type="range" min="0"
+                            max="100" value="{{ request('price_min') ?? 0 }}" />
+                        <input class="range-slider-part" id="range-slider-max" type="range" min="0"
+                            max="100" value="{{ request('price_max') ?? 100 }}" />
+                    </div>
                 </div>
             </div>
             {{-- Anime --}}
-            <div class="filter-col-other">
+            <div class="filter-selectable-list">
                 <select class="form-select filter-row-other" id="anime" name="anime">
                     <option value="" {{ request('anime') === '' ? 'selected' : '' }} hidden>Anime</option>
                     <option value="Naruto" {{ request('anime') === 'Naruto' ? 'selected' : '' }}>Naruto</option>
@@ -36,7 +45,7 @@
                 </select>
             </div>
             {{-- Color --}}
-            <div class="filter-col-other">
+            <div class="filter-selectable-list">
                 <select class="form-select filter-row-other" id="color" name="color">
                     <option value="" {{ request('color') === '' ? 'selected' : '' }} hidden>Farba</option>
                     <option value="black" {{ request('color') === 'black' ? 'selected' : '' }}>Čierna</option>

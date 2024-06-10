@@ -1,3 +1,6 @@
+@push('scripts')
+    @vite(['resources/js/product/admin.js'])
+@endpush
 <x-app-layout>
     {{-- Product Edit Form --}}
     <form action="{{ route('product.update', $product) }}" method="POST" class="needs-validation" novalidate>
@@ -190,7 +193,4 @@
             </div>
         @endforeach
     </div>
-
-    {{-- Scripts --}}
-    @vite(['resources/js/product/admin.js'])
 </x-app-layout>
