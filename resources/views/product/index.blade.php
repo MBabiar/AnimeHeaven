@@ -83,8 +83,6 @@
                             {{ $product->name }}
                         </h5>
                         <p class="card-text">Cena: {{ $product->price }}€</p>
-                        {{-- TODO: Maybe delete or later implement adding product to cart from index page. We will need to add a special pop up for it to select variant(size) and amount --}}
-                        {{-- <a href="#" class="btn btn-primary">Do košíka</a> --}}
                     </div>
                 </div>
             </div>

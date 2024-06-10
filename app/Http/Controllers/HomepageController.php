@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Product;
+
 class HomepageController extends Controller
 {
     /**
@@ -9,6 +11,7 @@ class HomepageController extends Controller
      */
     public function index()
     {
-        return view('homepage');
+        $products = Product::all()->sortByDesc('popularity')->take(8);
+        return view('homepage', compact('products'));
     }
 }

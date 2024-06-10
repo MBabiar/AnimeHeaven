@@ -40,7 +40,6 @@
             </div>
 
             {{-- Cart --}}
-            {{-- TODO: Add route to cart --}}
             <a href="{{ route('cart.show') }}" class="col nav-link">
                 <img src="{{ asset('images/shopping_cart.png') }}" class="img-fluid cart-img" alt="" />
             </a>
