@@ -18,7 +18,7 @@
         <div class="prof-cart-link">
             {{-- Profile --}}
             <div class="col nav-link">
-                <img src="{{ asset('images/profile_placeholder.png') }}" class="img-fluid profile-img" alt=""
+                <img src="{{ asset('images/profile_logo.png') }}" class="img-fluid profile-img" alt=""
                     data-bs-toggle="modal" data-bs-target="#ProfileModal" />
                 <div class="modal fade" id="ProfileModal" tabindex="-1" aria-labelledby="exampleModalLabel"
                     aria-hidden="true">
@@ -42,7 +42,7 @@
             {{-- Cart --}}
             {{-- TODO: Add route to cart --}}
             <a href="{{ route('cart.show') }}" class="col nav-link">
-                <img src="{{ asset('images/shopping_cart.png') }}" class="img-fluid" alt="" />
+                <img src="{{ asset('images/shopping_cart.png') }}" class="img-fluid cart-img" alt="" />
             </a>
         </div>
     </div>

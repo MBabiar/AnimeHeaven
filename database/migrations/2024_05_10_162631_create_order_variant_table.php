@@ -12,8 +12,8 @@ return new class extends Migration {
     {
         Schema::create('order_variant', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('order_id')->constrained();
-            $table->foreignId('variant_id')->constrained();
+            $table->foreignId('order_id')->constrained()->cascadeOnDelete();
+            $table->foreignId('variant_id')->constrained()->cascadeOnDelete();
             $table->integer('amount');
             $table->timestamps();
         });
@@ -24,6 +24,6 @@ return new class extends Migration {
      */
     public function down(): void
     {
-        Schema::dropIfExists('order_table');
+        Schema::dropIfExists('order_variant');
     }
 };
